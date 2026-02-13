@@ -20,7 +20,7 @@ export const TREASURY_ADDRESS =
   "0x0000000000000000000000000000000000000000";
 
 export const APP_URL =
-  process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
+  (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
 
 export const MAX_CONFESSION_LENGTH = 500;
 
