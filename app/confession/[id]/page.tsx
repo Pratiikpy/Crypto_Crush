@@ -19,12 +19,9 @@ export default function ConfessionPage() {
   useEffect(() => {
     const init = async () => {
       try {
-        const inMiniApp = await sdk.isInMiniApp();
-        if (inMiniApp) {
-          await sdk.actions.ready();
-          const ctx = await sdk.context;
-          setUserFid(ctx.user.fid);
-        }
+        await sdk.actions.ready();
+        const ctx = await sdk.context;
+        setUserFid(ctx.user.fid);
       } catch {
         // not in mini app
       }

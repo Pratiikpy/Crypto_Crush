@@ -33,13 +33,10 @@ export function SendConfessionFlow() {
   useEffect(() => {
     const loadContext = async () => {
       try {
-        const inMiniApp = await sdk.isInMiniApp();
-        if (inMiniApp) {
-          const ctx = await sdk.context;
-          setUserFid(ctx.user.fid);
-          setUsername(ctx.user.username);
-          setPfpUrl(ctx.user.pfpUrl);
-        }
+        const ctx = await sdk.context;
+        setUserFid(ctx.user.fid);
+        setUsername(ctx.user.username);
+        setPfpUrl(ctx.user.pfpUrl);
       } catch {
         // not in mini app
       }

@@ -8,17 +8,7 @@ import { ValentineEffects } from "@/components/ValentineEffects";
 
 export default function SendPage() {
   useEffect(() => {
-    const init = async () => {
-      try {
-        const inMiniApp = await sdk.isInMiniApp();
-        if (inMiniApp) {
-          await sdk.actions.ready();
-        }
-      } catch {
-        // not in mini app
-      }
-    };
-    init();
+    sdk.actions.ready().catch(() => {});
   }, []);
 
   return (

@@ -11,6 +11,7 @@ const config = {
     homeUrl: APP_URL,
     webhookUrl: `${APP_URL}/api/webhook`,
     iconUrl: `${APP_URL}/icon.png`,
+    imageUrl: `${APP_URL}/og.png`,
     splashImageUrl: `${APP_URL}/splash.png`,
     splashBackgroundColor: "#1a0a1e",
     heroImageUrl: `${APP_URL}/hero.png`,

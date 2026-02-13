@@ -14,12 +14,9 @@ export default function Home() {
   useEffect(() => {
     const init = async () => {
       try {
-        const inMiniApp = await sdk.isInMiniApp();
-        if (inMiniApp) {
-          await sdk.actions.ready();
-          const ctx = await sdk.context;
-          setUsername(ctx.user.username);
-        }
+        await sdk.actions.ready();
+        const ctx = await sdk.context;
+        setUsername(ctx.user.username);
       } catch {
         // Running outside mini app context
       }

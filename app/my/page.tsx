@@ -18,13 +18,10 @@ export default function MyPage() {
   useEffect(() => {
     const init = async () => {
       try {
-        const inMiniApp = await sdk.isInMiniApp();
-        if (inMiniApp) {
-          await sdk.actions.ready();
-          const ctx = await sdk.context;
-          setUserFid(ctx.user.fid);
-          setUsername(ctx.user.username);
-        }
+        await sdk.actions.ready();
+        const ctx = await sdk.context;
+        setUserFid(ctx.user.fid);
+        setUsername(ctx.user.username);
       } catch {
         // not in mini app
       }
