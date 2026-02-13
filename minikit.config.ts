@@ -4,9 +4,9 @@ const config = {
   miniapp: {
     version: "1",
     name: "Crypto Crush Confession",
-    subtitle: "Anonymous Valentine Confessions",
+    subtitle: "Anonymous Valentine Confession",
     description:
-      "Send anonymous Valentine's confessions to your crush for 0.1 USDC. They'll never know... unless you reveal yourself.",
+      "Send anonymous Valentine confessions to your crush for 0.1 USDC. They will never know, unless you reveal yourself.",
     tagline: "Confess your crypto crush",
     homeUrl: APP_URL,
     webhookUrl: `${APP_URL}/api/webhook`,
@@ -16,7 +16,7 @@ const config = {
     heroImageUrl: `${APP_URL}/hero.png`,
     ogTitle: "Crypto Crush Confession",
     ogDescription:
-      "Someone sent you an anonymous confession... Pay 0.1 USDC to send yours.",
+      "Someone sent you an anonymous confession. Pay 0.1 USDC to send yours.",
     ogImageUrl: `${APP_URL}/og.png`,
     primaryCategory: "social",
     tags: ["valentine", "confession", "anonymous", "crush", "love"],
