@@ -18,6 +18,9 @@ export const metadata: Metadata = {
       "Someone sent you an anonymous confession... Pay 0.1 USDC to send yours.",
     images: ["/og.png"],
   },
+  other: {
+    "base:app_id": "698e918b7ca07f5750bbd7b3",
+  },
 };
 
 export default function RootLayout({
